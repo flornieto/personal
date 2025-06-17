@@ -1,0 +1,71 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portafolio - Diseño de Indumentaria</title>
+  <!-- TailwindCSS vía CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pinklight: '#ffe4e1',
+            pinkbase:  '#ffc0cb',
+            pinkdark:  '#d14747',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- marked.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body class="bg-pinklight font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-pinkbase shadow-md fixed w-full z-10">
+    <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-pinkdark">Mi Portafolio</a>
+      <div class="space-x-4">
+        <a href="#trabajos" class="text-pinkdark hover:text-gray-800">Trabajos</a>
+        <a href="#blog"     class="text-pinkdark hover:text-gray-800">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-b from-pinklight to-pinkbase pt-20">
+    <div class="text-center max-w-2xl mx-auto px-4">
+      <h1 class="text-5xl font-extrabold text-pinkdark mb-4">¡Hola, soy Florencia!</h1>
+      <p class="text-xl text-pinkdark mb-6">Estudiante de diseño de indumentaria, creando piezas únicas con pasión y estilo.</p>
+      <a href="#trabajos" class="bg-pinkdark text-white px-6 py-3 rounded-full hover:bg-pinkbase transition">Ver mis trabajos</a>
+    </div>
+  </section>
+
+  <!-- Trabajos -->
+  <section id="trabajos" class="py-16 bg-pinklight">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-pinkdark mb-8 text-center">Mis Trabajos</h2>
+      <div id="trabajos-content" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="py-16 bg-pinkbase">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-pinkdark mb-8 text-center">Mi Blog</h2>
+      <div id="blog-content"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pinklight py-6 text-center">
+    <p class="text-pinkdark">© 2025 Florencia. Hecho con 💗.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

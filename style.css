@@ -1,0 +1,55 @@
+/* style.css */
+:root {
+  --primary: #ffc0cb;    /* rosa claro */
+  --secondary: #ffe4e1;  /* rosa muy suave */
+  --accent: #d14747;     /* rojo suave para énfasis */
+  --text: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+}
+header {
+  background: var(--primary);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header h1 {
+  margin: 0;
+  color: var(--accent);
+}
+nav {
+  margin-top: 0.5rem;
+}
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: bold;
+}
+nav a:hover {
+  color: var(--text);
+}
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+main h1, main h2 {
+  color: var(--accent);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.3rem;
+}
+main p, main li {
+  line-height: 1.6;
+}
