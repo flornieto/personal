@@ -1,6 +1,6 @@
 # Mi primer proyecto
 
-![Mi Diseño 1](/personal/imagenes/diseño_1.jpeg)
+![Mi Diseño 1](../imagenes/diseño_1.jpeg)
 
 ## Sobre este proyecto
 
