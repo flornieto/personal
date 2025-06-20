@@ -2,15 +2,15 @@
   "version": 3,
   "pages404": true,
   "caseSensitive": false,
-  "basePath": "/tu-repositorio",
+  "basePath": "/personal",
   "redirects": [
     {
-      "source": "/tu-repositorio",
-      "destination": "/tu-repositorio/",
+      "source": "/personal",
+      "destination": "/personal/",
       "basePath": false,
       "internal": true,
       "statusCode": 308,
-      "regex": "^/tu-repositorio$"
+      "regex": "^/personal$"
     },
     {
       "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
@@ -69,9 +69,9 @@
   "rewrites": {
     "beforeFiles": [
       {
-        "source": "/tu-repositorio//_next/:path+",
-        "destination": "/tu-repositorio/_next/:path+",
-        "regex": "^/tu-repositorio//_next(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))(?:/)?$"
+        "source": "/personal//_next/:path+",
+        "destination": "/personal/_next/:path+",
+        "regex": "^/personal//_next(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))(?:/)?$"
       }
     ],
     "afterFiles": [],

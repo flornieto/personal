@@ -1,7 +1,9 @@
 {
   "version": 1,
   "config": {
-    "env": {},
+    "env": {
+      "NEXT_PUBLIC_BASE_PATH": "/personal"
+    },
     "webpack": null,
     "eslint": {
       "ignoreDuringBuilds": true
@@ -12,7 +14,7 @@
     },
     "distDir": ".next",
     "cleanDistDir": true,
-    "assetPrefix": "/tu-repositorio/",
+    "assetPrefix": "/personal/",
     "cacheMaxMemorySize": 52428800,
     "configOrigin": "next.config.mjs",
     "useFileSystemPublicRoutes": true,
@@ -46,7 +48,7 @@
         256,
         384
       ],
-      "path": "/tu-repositorio/_next/image/",
+      "path": "/personal/_next/image/",
       "loader": "default",
       "loaderFile": "",
       "domains": [],
@@ -69,9 +71,9 @@
       "pagesBufferLength": 5
     },
     "amp": {
-      "canonicalBase": "/tu-repositorio"
+      "canonicalBase": "/personal"
     },
-    "basePath": "/tu-repositorio",
+    "basePath": "/personal",
     "sassOptions": {},
     "trailingSlash": true,
     "i18n": null,

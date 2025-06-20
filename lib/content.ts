@@ -20,6 +20,7 @@ export interface BlogPost {
 // Simulated markdown content parsing
 // In a real app, you'd use a library like gray-matter to parse actual markdown files
 export async function getProjects(): Promise<Project[]> {
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ""
   // Simulate reading from markdown files
   const projects: Project[] = [
     {
@@ -43,7 +44,7 @@ export async function getProjects(): Promise<Project[]> {
         <h2>Conclusiones</h2>
         <p>Este proyecto me permitió explorar nuevas técnicas y aprender lecciones valiosas sobre diseño y creatividad. Fue el punto de partida de mi pasión por el diseño floral aplicado a la indumentaria.</p>
       `,
-      image: "/images/diseño_1.jpeg",
+      image: prefix + "/images/diseño_1.jpeg",
       category: "Diseño Floral",
       materials: ["Algodón orgánico", "Hilos de seda", "Aplicaciones florales"],
       date: "15 de Mayo, 2025",
@@ -66,7 +67,7 @@ export async function getProjects(): Promise<Project[]> {
           <li>Falda con texturas naturales</li>
         </ul>
       `,
-      image: "/images/diseño_2.jpeg",
+      image: prefix + "/images/diseño_2.jpeg",
       category: "Indumentaria",
       materials: ["Lino", "Algodón", "Bordados florales"],
       date: "2 de Junio, 2025",
@@ -85,7 +86,7 @@ export async function getProjects(): Promise<Project[]> {
         <h2>Resultado</h2>
         <p>El resultado fue una pieza única que combina lo tradicional con lo contemporáneo, creando un diálogo entre el pasado y el presente del arte textil.</p>
       `,
-      image: "/images/diseño_3.jpeg",
+      image: prefix + "/images/diseño_3.jpeg",
       category: "Arte Textil",
       materials: ["Hilos metálicos", "Resina", "Telas mixtas"],
       date: "10 de Junio, 2025",

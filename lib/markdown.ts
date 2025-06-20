@@ -4,6 +4,9 @@ import matter from "gray-matter"
 import { remark } from "remark"
 import html from "remark-html"
 
+// Prefijo público (/personal en producción) para los recursos estáticos
+const PUBLIC_PREFIX = process.env.NEXT_PUBLIC_BASE_PATH || ""
+
 const contentDirectory = path.join(process.cwd(), "content")
 
 export interface ProjectData {
@@ -62,7 +65,7 @@ export async function getProjects(): Promise<ProjectData[]> {
           title: data.title || "",
           date: data.date || "",
           category: data.category || "",
-          image: data.image,
+          image: data.image ? `${PUBLIC_PREFIX}${data.image}` : undefined,
           materials: data.materials || [],
           excerpt: data.excerpt || "",
           featured: data.featured || false,
@@ -124,7 +127,7 @@ export async function getAboutData(): Promise<AboutData> {
   return {
     title: data.title || "Sobre Mí",
     subtitle: data.subtitle || "",
-    image: data.image,
+    image: data.image ? `${PUBLIC_PREFIX}${data.image}` : undefined,
     content: htmlContent,
   }
 }
